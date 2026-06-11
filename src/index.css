@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap";
+
+@theme {
+  --color-primary: #E65100;       /* Saffron Orange */
+  --color-accent: #D4AF37;        /* Sacred Gold */
+  --color-secondary: #0F4C5C;     /* Peacock Teal/Blue */
+  --color-border: #e8e4dc;        /* Warm light grey border */
+  --color-background: #FCFAF5;    /* Cream / Sandalwood white */
+  --color-foreground: #2C2621;    /* Deep charcoal */
+  --color-card: #ffffff;
+  --color-muted: #f4eee2;         /* Sandy/sandalwood muted background */
+  
+  --font-sans: "Lora", Georgia, Times New Roman, serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-cinzel: "Cinzel", serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom transitions and overlays */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-transform {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Masonry grid column gap compatibility */
+.break-inside-avoid {
+  break-inside: avoid;
+}
